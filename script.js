@@ -1,5 +1,8 @@
+let num1 = 0;
+let num2 = 0;
 //add
 const add = function (a, b) {
+  alert('a is ' + a + ' b is ' + b);
   displayAnswer(a + b);
 };
 
@@ -31,12 +34,13 @@ const operate = function (num1, operator, num2) {
   if (operator == "/") {
     divide(num1, num2);
   }
+  num1=0;
+  num2=0;
 };
 
 const displayAnswer = function (a) {
-  console.log(parseInt(a));
-  const h1 = document.getElementById("displayAnswer");
-  h1.innerText = a;
+  const displayText = document.getElementById('display');
+  displayText.innerText = a;
 };
 
 const getNumbers = function () {
@@ -50,23 +54,31 @@ const getNumbers = function () {
   operate(num1, op, num2);
 };
 
-
+const waitForEquals = function (num1, op) {
+  displayText = document.getElementById('display');
+  const equalsBtn = document.getElementById('equalsBtn');
+    equalsBtn.addEventListener('click', function() {
+      num2 = displayText.innerText;
+      num2 = parseInt(num2);
+      operate(num1, op, num2);
+    });
+}
 
 
 window.onload = function () {
     const displayText = document.getElementById('display');
-
+  let num2 = 0;
     //clear button event listener to clear the display when pressed
     const clearBtn = document.getElementById('clearBtn');
     clearBtn.addEventListener('click', function() {
         displayText.innerText = '';
+        num1 = 0;
+        num2=0;
     });
 
     //event listener for each number button
     const oneBtn = document.getElementById('one');
     oneBtn.addEventListener('click', function() {
-        //displayText.innerText = '1';
-        //append 1 to displayText instead of rewriting it
         displayText.innerText = displayText.innerText + '1';
     });
 
@@ -114,8 +126,27 @@ window.onload = function () {
     zeroBtn.addEventListener('click', function() {
       displayText.innerText = displayText.innerText + '0';
     });
+
+    const addBtn = document.getElementById('addBtn');
+    addBtn.addEventListener('click', function () {
+      //let num1 = displayText.innerText;
+      num1 = displayText.innerText;
+      num1 = parseInt(num1);
+      displayText.innerText = '';
+      waitForEquals(num1,'+');
+    });
 }
 
-
 //when + is clicked, save displayText.innerText and make it an int.
+
+//or when + is clicked, put it in the display text area
+//then when = is pressed, use regex to get the numbers and operator
+//so when = is pressed, displayText will be "56+32"
+
+//when you git +, save innerText
+//then have variable saved as '+' to pass into operate
+//then get the second number
+//when enter is hit, run the add function with the first
+//variable and the second
+
 
