@@ -65,51 +65,57 @@ window.onload = function () {
     //event listener for each number button
     const oneBtn = document.getElementById('one');
     oneBtn.addEventListener('click', function() {
-        displayText.innerText = '1';
+        //displayText.innerText = '1';
+        //append 1 to displayText instead of rewriting it
+        displayText.innerText = displayText.innerText + '1';
     });
 
     const twoBtn = document.getElementById('two');
     twoBtn.addEventListener('click', function() {
-        displayText.innerText = '2';
+      displayText.innerText = displayText.innerText + '2';
     });
 
     const threeBtn = document.getElementById('three');
     threeBtn.addEventListener('click', function() {
-        displayText.innerText = '3';
+      displayText.innerText = displayText.innerText + '3';
     });
 
     const fourBtn = document.getElementById('four');
     fourBtn.addEventListener('click', function() {
-        displayText.innerText = '4';
+      displayText.innerText = displayText.innerText + '4';
     });
 
     const fiveBtn = document.getElementById('five');
     fiveBtn.addEventListener('click', function() {
-        displayText.innerText = '5';
+      displayText.innerText = displayText.innerText + '5';
     });
 
     const sixBtn = document.getElementById('six');
     sixBtn.addEventListener('click', function() {
-        displayText.innerText = '6';
+      displayText.innerText = displayText.innerText + '6';
     });
 
     const sevenBtn = document.getElementById('seven');
     sevenBtn.addEventListener('click', function() {
-        displayText.innerText = '7';
+      displayText.innerText = displayText.innerText + '7';
     });
 
     const eightBtn = document.getElementById('eight');
     eightBtn.addEventListener('click', function() {
-        displayText.innerText = '8';
+      displayText.innerText = displayText.innerText + '8';
     });
 
     const nineBtn = document.getElementById('nine');
     nineBtn.addEventListener('click', function() {
-        displayText.innerText = '9';
+      displayText.innerText = displayText.innerText + '9';
     });
 
     const zeroBtn = document.getElementById('zero');
     zeroBtn.addEventListener('click', function() {
-        displayText.innerText = '0';
+      displayText.innerText = displayText.innerText + '0';
     });
 }
+
+
+//when + is clicked, save displayText.innerText and make it an int.
+
