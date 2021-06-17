@@ -1,24 +1,9 @@
-Calculator
+The Odin Project - Calculator
 
-add listener to classes for operators to 
+A recreation of the iOS calculator app
 
-
-
-
-
-1+2
-1,2
-=3
-C
-
-4+5
-1,5
-4,6
-10
-C
-
-9+8
-1,8
-4,9
-9,13
-=22
+TODO:
+    -Make front end responsive for mobile
+    -Trim answers with decimals to 2 decimal places
+    -Add decimal and floats compatibility instead of integers only
+    -Maybe find a better design instead of the iOS design
