@@ -407,3 +407,17 @@ template {
   display: flex;
   justify-content: flex-end;
 }
+
+#clearBtn {
+  background-color: orange;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+}
+
+#equalsBtn {
+  background-color: orange;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+}
